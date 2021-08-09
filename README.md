@@ -18,4 +18,7 @@
 基于施密特正交化（Gram Schmdit）的QR分解（QR算法求特征值的预备工作，用for循环，不知道能不能用矩阵进行计算）  
   
 6.householder:householder变换（镜面变换）
-QR算法求特征值的预备工作，在QR算法运行前将待求矩阵转换为upper hessenberg矩阵，加快QR算法迭代
+QR算法求特征值的预备工作，在QR算法运行前将待求矩阵转换为upper hessenberg矩阵，加快QR算法迭代  
+  
+7.QR_algorithm:QR算法
+用于求解矩阵的特征值，实和复特征值应该都能求。先通过householder变换将矩阵化为upper hessenburg矩阵，然后用移动QR求解特征值（过程中所有变换与分解所得矩阵可证明都与原矩阵相似，于是具有相同特征值）

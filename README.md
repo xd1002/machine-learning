@@ -15,4 +15,7 @@
 用牛顿法进行优化，但未加入正则项，随迭代次数增加参数会不断变大  
   
 5.QR_decomposition:QR分解  
-基于施密特正交化（Gram Schmdit）的QR分解（QR算法求特征值的预备工作，用for循环，不知道能不能用矩阵进行计算）
+基于施密特正交化（Gram Schmdit）的QR分解（QR算法求特征值的预备工作，用for循环，不知道能不能用矩阵进行计算）  
+  
+6.householder:householder变换（镜面变换）
+QR算法求特征值的预备工作，在QR算法运行前将待求矩阵转换为upper hessenberg矩阵，加快QR算法迭代

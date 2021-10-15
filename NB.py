@@ -186,8 +186,8 @@ class NB():
                     minus_exp=-((data_x[j][i]-self.negative_dict_1[self.x_real_name[j]][0])**2)/2/self.negative_dict_1[self.x_real_name[j]][1]
                     pro_plus=pro_plus*np.exp(plus_exp)/(np.sqrt(2*np.pi*self.positive_dict_1[self.x_real_name[j]][1]))
                     pro_minus=pro_minus*np.exp(minus_exp)/(np.sqrt(2*np.pi*self.negative_dict_1[self.x_real_name[j]][1]))
-            self.positive_probability.append(pro_plus)
-            self.negative_probability.append(pro_minus)
+            self.positive_probability.append(pro_plus*positive_num/data_x.shape[0])
+            self.negative_probability.append(pro_minus*negative_num/data_x.shape[0])
         
         self.predict_result=[]
         for i in range(data_x.shape[0]):
